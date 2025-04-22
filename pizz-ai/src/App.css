@@ -1,0 +1,100 @@
+#root {
+  position: relative;     
+  height: 100vh;          
+  width: 100%;           
+  margin: 0;
+}
+
+.main-title {
+  text-align: center;
+}
+
+.chat-card {
+  position: absolute;
+  bottom: 20vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;             
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  background-color: #333;
+}
+
+.chat-messages {
+  flex: 1;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 10px;
+  margin-bottom: 15px;
+  overflow-y: auto;
+  max-height: 400px;
+}
+
+.message {
+  padding: 10px 15px;
+  border-radius: 1rem;
+  align-self: flex-end;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  background-color: #222;
+}
+
+.user {
+  align-self: flex-end;
+}
+
+.bot {
+  align-self: flex-start;
+}
+
+.chat-input-wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.chat-textarea {
+  flex: 1;
+  resize: none;
+  border-radius: 1.5rem;
+  padding: 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.btn {
+  border-radius: 0.75rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 0 20px;
+  cursor: pointer;
+  border: 0;
+  background: white;
+  color: #777;
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn-send:hover {
+  background: #ddd;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex; justify-content: center; align-items: center;
+}
+.modal-content {
+  width: 70%; padding: 20px;
+  background-color: #333;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: flex; flex-direction: column;
+  gap: 10px;
+}
+.modal-content .btn-send {
+  align-self: flex-end;
+}

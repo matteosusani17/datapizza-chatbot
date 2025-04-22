@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: pizz-ai/Dockerfile
+    container_name: datapizza-frontend
+    ports:
+      - '3000:80'
+    depends_on:
+      - backend
+    restart: always
+
+  backend:
+    build:
+      context: .
+      dockerfile: pizz-api/Dockerfile
+    container_name: datapizza-backend
+    ports:
+      - '5000:5000'
+    restart: always
